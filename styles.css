@@ -7,11 +7,30 @@
 }
 
 body {
-  /* trasparente per vedere le modifiche sopra */
-  background-color: rgba(13, 50, 91, 0.62);
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  /* linea debug trasparente per vedere le modifiche sopra */
+  /* background-color: rgba(13, 50, 91, 0.62); */
+  /* fine linea debug */
+  background-color: rgba(13, 50, 91, 1);
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
+/* quadratino verde statico in basso a destra */
+.help {
+  color: white;
+  background-color: #7fb802;
+  border-radius: 4px;
+  text-align: center;
+  padding-top: 5px;
+  width: 55px;
+  height: 60px;
+  top: 95%;
+  left: 95%;
+  position: fixed;
+}
+
+.help:hover{
+  top: 94%;
+}
 /* *******************************+** *//* ****************************+** */
 /* ************************HEADER CON BARRA NAVIGAZIONE*****************+** */
 /* *******************************+** *//* ****************************+** */
@@ -72,8 +91,8 @@ body {
   color: white;
   font-size: 11px;
   float: right;
-  padding-right: 6%;
-  color: rgba(255,255,255,.5);
+  padding-right: 2.5%;
+  color: rgba(255,255,255,0.5);
 }
 
 /* Gestisce il bottone LOGIN */
@@ -88,7 +107,7 @@ body {
   margin-right: 9px;
   margin-top: 10px;
 }
-/* Gestisce il bottone STRUTTURA UN PIANO*/
+/* Gestisce il bottone 'STRUTTURA UN PIANO'*/
 .bottoneStrutturaUnPiano{
   background-color: #7fb802;
   color: white;
@@ -101,7 +120,7 @@ body {
 
 /* *******************************+** *//* ****************************+** */
 /* *******************************+** *//* ****************************+** */
-/* ***********************VARIE SEZIONI BLU E BIANCHE DEL SITIO********+** */
+/* ***********************VARIE SEZIONI BLU E BIANCHE DEL SITO********+** */
 /* ***************************** CORPO DEL SITO ************************+* */
 /* *******************************+** *//* ****************************+** */
 
@@ -130,10 +149,21 @@ body {
   background-color: white;
 }
 
+.pSezioniB-Grande{
+  color: white;
+  font-size: 35px;
+}
 
-/* ****************Prima Sezione******+** */
+.pSezioniBlue{
+  width: 80%;
+  color: rgba(255,255,255,0.5);
+  font-size: 18px;
+  line-height: 1.5;
+}
 
-.sezioneSubitoSottoHeader{
+/* ****************Sezione 1 e sezione 7 quelle con immagini sovrapposte******+** */
+
+.sezioneSubitoSottoHeader, .sezioneProfessionisti{
   width: 86%;
   /* visto che width 86 margin left 7 centra la sezione */
   margin-left: 7%;
@@ -171,15 +201,89 @@ body {
 
 }
 
+.backgroundSezioneProfessionisti{
+  height: 420px;
+  width: 65%;
+  background-image: url(img/talking.png);
+  background-size: cover;
+  top: 50%;
+  left: 61%;
+  transform: translate(-40%, -50%);
+  position: absolute;
+}
+
+.testoSovrappostoImmagineProfessionisti{
+  color: white;
+  font-size: 30px;
+  width: 40%;
+  padding-top: 80px;
+  padding-left: 80px;
+  position: absolute;
+
+}
+
+.bottoneScopriCome{
+  background-color: #7fb802;
+  color: white;
+  /* il primo valore indiga il padding top e bottom il secondo left e right */
+  padding: 14px 40px;
+  border-color: #7fb802;
+  border-radius: 5px;
+  margin-right: 11px;
+}
+
 /* ****************Sezione Meglio di Altri******+** */
 
 .sezioneSiamoMegliodiAltri{
   text-align: center;
+
 }
 .sezioneSiamoMegliodiAltri span{
 
 }
 
+/* **************** Sezione le nostre lezioni *******+** */
+.sezioneNostreLezioni:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.sezioneNostreLezioni span{
+  color: #f0ad4e;
+}
+
+.testoFloat{
+  float: left;
+  width: 37%;
+  /* debug */
+  /* background-color: green; */
+  margin-top: 150px;
+  margin-left: 80px;
+}
+
+.testoFloat .underline {
+  text-decoration: underline;
+  color: #98c8f8;
+}
+
+.sezioneNostreLezioni img{
+  height: 500px;
+  float: right;
+  /* debug */
+  /* background-color: red; */
+}
+/* **************** Sezione 7, sezioneProfessionisti *******+** */
+/* VEDI SOPRA INSIEME ALLA PRIMA */
+
+/* ****************Sezione DUBBI******+** */
+.sezioneDubbi{
+  padding-top: 30px;
+  padding-left: 80px;
+  padding-bottom:30px;
+}
+.sezioneDubbi span{
+  color: #f0ad4e;
+}
 
 /* *******************************+** *//* ****************************+** */
 /* *******************************+* FOOTER ***************************+** */
@@ -204,7 +308,8 @@ footer {
 
   /* debug */
   /* margin-top: 50px; */
-  background-color: rgba(123, 50, 91, 1);
+  /* background-color: rgba(123, 50, 91, 1); */
+  /* fine debug */
 
 }
 
@@ -237,7 +342,8 @@ footer {
 .asideDestraNelFooter{
   margin-left: 49%;
   width: 30%;
-  background-color: red;
+  /* Per Degug */
+  /* background-color: red; */
 }
 .asideDestraNelFooter:after {
   content: "";
