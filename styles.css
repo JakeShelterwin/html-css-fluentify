@@ -1,0 +1,100 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* tolgo alle liste non ordinate in html il pallino */
+  list-style: none;
+}
+
+body {
+  /* trasparente per vedere le modifiche sopra */
+  background-color: rgba(13, 50, 91, 0.62);
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/* *******************************+** *//* ****************************+** */
+/* ************************HEADER CON BARRA NAVIGAZIONE*****************+** */
+/* *******************************+** *//* ****************************+** */
+
+/* in html contiene tutte gli altri blocchi, quindi imposto regole generali per tali blocchi */
+.rigaHeader{
+  width: 86%;
+  background-color: rgba(13, 50, 91, 1);
+  /* visto che width 86 margin left 7 centra l'header */
+  margin-left: 7%;
+  /* il padding gestisce le distanze degli elementi che contiene header */
+  padding-left: 8.3%;
+  padding-right: 5%;
+  padding-top: 1.5%;
+  padding-bottom: 1%;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* .rigaHeader contiene elementi float, dumque clearfix */
+.rigaHeader::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* immagine del logo */
+.rigaHeader img{
+  float: left;
+}
+
+/* di qui in avanti si gestisce la barra di navigazione */
+.rigaHeader nav {
+  display: inline-block;
+  float: left;
+  padding-left: 4.7%;
+  padding-top: 15px;
+}
+
+.rigaHeader nav ul li {
+  display: inline-block;
+  color: white;
+  font-size: 11px;
+  padding-left: 10px;
+}
+
+/* cambio colore al font quando passo sopra all'elemento li contenuto in ul conteuto in nav contenuto dal .rigaHeader */
+.rigaHeader nav ul li:hover {
+  display: inline-block;
+  color: #f8b71c;
+  font-size: 11px;
+  padding-left: 10px;
+}
+
+/* da qui in avanti si gestisce il resto dell'header e i suoi bottoni */
+.opzioniHeader{
+  display: inline-block;
+  float: left;
+  color: white;
+  font-size: 11px;
+  padding-left: 16.2%;
+  color: rgba(255,255,255,.5);
+}
+
+/* Gestisce il bottone LOGIN */
+.bottoneLogin{
+  background-color: rgba(0,0,0,0);
+  color: white;
+  /* il primo valore indiga il padding top e bottom il secondo left e right */
+  padding: 8px 21px;
+  border-color: #4e8cb6;
+  border-radius: 5px;
+  margin-left: 11px;
+  margin-right: 9px;
+  margin-top: 10px;
+}
+/* Gestisce il bottone STRUTTURA UN PIANO*/
+.bottoneStrutturaUnPiano{
+  background-color: #7fb802;
+  color: white;
+  /* il primo valore indiga il padding top e bottom il secondo left e right */
+  padding: 8px 14px;
+  border-color: #7fb802;
+  border-radius: 5px;
+  margin-right: 11px;
+}
