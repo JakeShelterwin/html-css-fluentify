@@ -32,7 +32,7 @@ body {
 }
 
 /* .rigaHeader contiene elementi float, dumque clearfix */
-.rigaHeader::after{
+.rigaHeader:after{
   content: "";
   display: table;
   clear: both;
@@ -100,6 +100,88 @@ body {
 }
 
 /* *******************************+** *//* ****************************+** */
+/* *******************************+** *//* ****************************+** */
+/* ***********************VARIE SEZIONI BLU E BIANCHE DEL SITIO********+** */
+/* ***************************** CORPO DEL SITO ************************+* */
+/* *******************************+** *//* ****************************+** */
+
+/* ****************EFFETTI GENERALI******+** */
+.clearfix:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.larghezza {
+  width: 86%;
+  /* visto che width 86 margin left 7 centra la sezione */
+  margin-left: 7%;
+}
+
+.sezioneBlue{
+  background-color: rgba(13, 50, 91, 1);
+}
+
+.sezioneAvorio{
+  background-color: #f9f9f9;
+}
+
+.sezioneBianca{
+  background-color: white;
+}
+
+
+/* ****************Prima Sezione******+** */
+
+.sezioneSubitoSottoHeader{
+  width: 86%;
+  /* visto che width 86 margin left 7 centra la sezione */
+  margin-left: 7%;
+  margin-top: 50px;
+  /* il padding gestisce le distanze degli elementi che contiene header */
+  height: 420px;
+  /* assegno position relative perché faccia da ancora alle 2 sezioni con position absolute che contiene */
+  position: relative;
+}
+
+/* grazie al position absolute e translate mi spsota l'immagine simile all'originale */
+.backgroundSubitoSottoHeader{
+  height: 420px;
+  width: 65%;
+  background-image: url(img/oldman.png);
+  background-size: cover;
+  top: 50%;
+  left: 61%;
+  transform: translate(-40%, -50%);
+  position: absolute;
+  /* debug line */
+  /* background-color: red; */
+
+}
+
+.testoSovrappostoImmagine{
+  color: white;
+  font-size: 45px;
+  width: 40%;
+  padding-top: 60px;
+  padding-left: 60px;
+  /* questo position absolute permette all'immagine backgroundSubitoSottoHeader
+  di scivolare sotto questo elemento html */
+  position: absolute;
+
+}
+
+/* ****************Sezione Meglio di Altri******+** */
+
+.sezioneSiamoMegliodiAltri{
+  text-align: center;
+}
+.sezioneSiamoMegliodiAltri span{
+
+}
+
+
+/* *******************************+** *//* ****************************+** */
 /* *******************************+* FOOTER ***************************+** */
 /* *******************************+** *//* ****************************+** */
 
@@ -121,12 +203,12 @@ footer {
   font-weight: bold;
 
   /* debug */
-  margin-top: 50px;
+  /* margin-top: 50px; */
   background-color: rgba(123, 50, 91, 1);
 
 }
 
-.containerFooter::after{
+.containerFooter:after{
   content: "";
   display: table;
   clear: both;
