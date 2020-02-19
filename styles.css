@@ -16,7 +16,7 @@ body {
 /* ************************HEADER CON BARRA NAVIGAZIONE*****************+** */
 /* *******************************+** *//* ****************************+** */
 
-/* in html contiene tutte gli altri blocchi, quindi imposto regole generali per tali blocchi */
+/* in html contiene tutte gli altri blocchi dell'header, quindi imposto regole generali per tali blocchi */
 .rigaHeader{
   width: 86%;
   background-color: rgba(13, 50, 91, 1);
@@ -97,4 +97,91 @@ body {
   border-color: #7fb802;
   border-radius: 5px;
   margin-right: 11px;
+}
+
+/* *******************************+** *//* ****************************+** */
+/* *******************************+* FOOTER ***************************+** */
+/* *******************************+** *//* ****************************+** */
+
+
+/* in html contiene tutte gli altri blocchi del footer, quindi imposto regole generali per tali blocchi */
+.containerFooter {
+  width: 86%;
+  background-color: rgba(123, 50, 91, 1);
+  /* visto che width 86 margin left 7 centra il footer */
+  margin-left: 7%;
+  /* il padding gestisce le distanze degli elementi che contiene header */
+  padding-left: 8.3%;
+  padding-right: 5%;
+  padding-top: 3.1%;
+  padding-bottom: 4.8%;
+  font-family: 'roboto', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+
+  /* debug */
+  margin-top: 50px;
+
+}
+
+.containerFooter::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* *******************************+** ASIDE AZIENDA ****************************+** */
+.azienda{
+  float: left;
+}
+
+.azienda span{
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.azienda ul li {
+  color: rgba(255, 255, 255, 0.4);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+/* *******************************ASIDE DESTRA NEL FOOTER************************+** */
+.asideDestraNelFooter{
+  margin-left: 49%;
+  width: 30%;
+  background-color: red;
+}
+.asideDestraNelFooter:after {
+  content: "";
+  display: table;
+  clear: right;
+}
+
+.creditiEDesign {
+  color: white;
+  text-align: right;
+  font-size: 18px;
+  float: right;
+}
+
+.creditiEDesign span{
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.contatti {
+  color: rgba(255, 255, 255, 0.4);
+  text-align: right;
+  font-size: 16px;
+  float: right;
+  margin-top: 55px;
+}
+
+.contatti span{
+  display: inline-block;
+  margin-bottom: 4px;
 }
