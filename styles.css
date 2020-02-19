@@ -69,10 +69,10 @@ body {
 /* da qui in avanti si gestisce il resto dell'header e i suoi bottoni */
 .opzioniHeader{
   display: inline-block;
-  float: left;
   color: white;
   font-size: 11px;
-  padding-left: 16.2%;
+  float: right;
+  padding-right: 6%;
   color: rgba(255,255,255,.5);
 }
 
